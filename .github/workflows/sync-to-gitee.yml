@@ -1,0 +1,19 @@
+name: Sync to Gitee
+on:
+  push:
+    branches: [ main ]
+jobs:
+  sync:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git config --global core.autocrlf false
+      - name: Sync to Gitee
+        shell: bash
+        run: |
+          git remote add gitee https://${{ secrets.GITEE_USERNAME }}:${{ secrets.GITEE_TOKEN }}@gitee.com/njtechzjt/jupter_math.git
+          git push gitee main
