@@ -1,0 +1,18 @@
+                            Numpy 库中有关线性代数的重要函数：
+函数                    说明                        函数                    说明
+np.eye                  生成单位矩阵                np.dot                  矩阵乘积
+np.ones                 生成所有元素为1的矩阵        np.inner                计算两个数组的内积
+np.zeros                生成零矩阵                  np.outer                计算两个向量的外积
+np.vander               生成范德蒙德矩阵             np.trace               计算主对角线元素的和
+np.diag                 矩阵和一维数组的相互转换      np.transpose            矩阵的转置
+
+                            numpy.linalg模块中有关线性代数的重要函数:
+函数                    说明                        函数                    说明
+det                     计算矩阵的行列式            lstsq                   计算Ax=b的最小二乘解
+eig                     计算矩阵特征根和特征向量     qr                      计算QR分解
+eigvals                 计算方阵特征根              svd                     计算奇异值分解
+inv                     计算方阵的逆                norm                    计算向量或矩阵的范数
+pinv                    计算矩阵Moore-Penrose伪逆   matrix_rank             计算矩阵的秩
+solve                   计算线性方程组Ax=b的解
+
+在Numpy库的array数组中，*和multiply运算等价，都表示矩阵的逐个元素相乘；@和dot()函数表示矩阵乘法
